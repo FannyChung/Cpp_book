@@ -5,19 +5,17 @@ using namespace std;
 
 int main(){
 	
-	srand(time(0));
 	int a1=89707;
 	HugeInteger h1(a1);
 	h1.output();
 
-	char a2[40];
+	char a2[41];
 	cout<<"\n输入第一个大整数：";
 	cin>>a2;
-	char *aPtr=a2;
-	HugeInteger h2(aPtr);
+	HugeInteger h2(a2);
 	h2.output();
 
-	char a3[40];
+	char a3[41];
 	cout<<"\n输入第二个大整数：";
 	cin>>a3;
 	HugeInteger h3(a3);
@@ -30,6 +28,15 @@ int main(){
 	cout<<" = ";
 	h2.subtract(h1).output();
 	cout<<endl;
+
+
+	cout << endl;
+	h2.output();
+	cout << " + ";
+	h1.output();
+	cout << " = ";
+	h2.add(h1).output();
+	cout << endl;
 
 	cout<<"比较：\n";
 	HugeInteger h[6];
@@ -99,5 +106,5 @@ int main(){
 			cout<<" is zero \n\n";
 		}
 	}
-	cin>>a1;
+	return 0;
 }

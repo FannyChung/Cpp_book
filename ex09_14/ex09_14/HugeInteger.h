@@ -31,7 +31,7 @@ public:
 	void input(const char *); // input
 	void output(); // output
 private:
-	int integer[40]; // 40 element array
+	int integer[40]; // 40 element array,0代表低位，39代表高位
 }; // end class HugeInteger
 
 #endif
